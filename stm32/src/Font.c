@@ -1,0 +1,88 @@
+#include "Font.h"
+
+static const uint8_t font5x7_space[5]  = {0x00,0x00,0x00,0x00,0x00};
+static const uint8_t font5x7_0[5]      = {0x3E,0x51,0x49,0x45,0x3E};
+static const uint8_t font5x7_1[5]      = {0x00,0x42,0x7F,0x40,0x00};
+static const uint8_t font5x7_2[5]      = {0x42,0x61,0x51,0x49,0x46};
+static const uint8_t font5x7_3[5]      = {0x21,0x41,0x45,0x4B,0x31};
+static const uint8_t font5x7_4[5]      = {0x18,0x14,0x12,0x7F,0x10};
+static const uint8_t font5x7_5[5]      = {0x27,0x45,0x45,0x45,0x39};
+static const uint8_t font5x7_6[5]      = {0x3C,0x4A,0x49,0x49,0x30};
+static const uint8_t font5x7_7[5]      = {0x01,0x71,0x09,0x05,0x03};
+static const uint8_t font5x7_8[5]      = {0x36,0x49,0x49,0x49,0x36};
+static const uint8_t font5x7_9[5]      = {0x06,0x49,0x49,0x29,0x1E};
+static const uint8_t font5x7_colon[5]  = {0x00,0x00,0x36,0x36,0x00};
+static const uint8_t font5x7_period[5] = {0x00,0x00,0x60,0x60,0x00};
+static const uint8_t font5x7_apos[5]   = {0x00,0x05,0x03,0x00,0x00};
+static const uint8_t font5x7_A[5] = {0x7E,0x11,0x11,0x11,0x7E};
+static const uint8_t font5x7_B[5] = {0x7F,0x49,0x49,0x49,0x36};
+static const uint8_t font5x7_C[5] = {0x3E,0x41,0x41,0x41,0x22};
+static const uint8_t font5x7_D[5] = {0x7F,0x41,0x41,0x22,0x1C};
+static const uint8_t font5x7_E[5] = {0x7F,0x49,0x49,0x49,0x41};
+static const uint8_t font5x7_F[5] = {0x7F,0x09,0x09,0x09,0x01};
+static const uint8_t font5x7_G[5] = {0x3E,0x41,0x49,0x49,0x7A};
+static const uint8_t font5x7_H[5] = {0x7F,0x08,0x08,0x08,0x7F};
+static const uint8_t font5x7_I[5] = {0x00,0x41,0x7F,0x41,0x00};
+static const uint8_t font5x7_J[5] = {0x20,0x40,0x41,0x3F,0x01};
+static const uint8_t font5x7_K[5] = {0x7F,0x08,0x14,0x22,0x41};
+static const uint8_t font5x7_L[5] = {0x7F,0x40,0x40,0x40,0x40};
+static const uint8_t font5x7_M[5] = {0x7F,0x02,0x0C,0x02,0x7F};
+static const uint8_t font5x7_N[5] = {0x7F,0x04,0x08,0x10,0x7F};
+static const uint8_t font5x7_O[5] = {0x3E,0x41,0x41,0x41,0x3E};
+static const uint8_t font5x7_P[5] = {0x7F,0x09,0x09,0x09,0x06};
+static const uint8_t font5x7_Q[5] = {0x3E,0x41,0x51,0x21,0x5E};
+static const uint8_t font5x7_R[5] = {0x7F,0x09,0x19,0x29,0x46};
+static const uint8_t font5x7_S[5] = {0x46,0x49,0x49,0x49,0x31};
+static const uint8_t font5x7_T[5] = {0x01,0x01,0x7F,0x01,0x01};
+static const uint8_t font5x7_U[5] = {0x3F,0x40,0x40,0x40,0x3F};
+static const uint8_t font5x7_V[5] = {0x1F,0x20,0x40,0x20,0x1F};
+static const uint8_t font5x7_W[5] = {0x3F,0x40,0x38,0x40,0x3F};
+static const uint8_t font5x7_X[5] = {0x63,0x14,0x08,0x14,0x63};
+static const uint8_t font5x7_Y[5] = {0x07,0x08,0x70,0x08,0x07};
+static const uint8_t font5x7_Z[5] = {0x61,0x51,0x49,0x45,0x43};
+
+const uint8_t* Font_GetGlyph(char c) {
+    if (c >= 'a' && c <= 'z') c -= 32;
+    switch (c) {
+        case '0': return font5x7_0;
+        case '1': return font5x7_1;
+        case '2': return font5x7_2;
+        case '3': return font5x7_3;
+        case '4': return font5x7_4;
+        case '5': return font5x7_5;
+        case '6': return font5x7_6;
+        case '7': return font5x7_7;
+        case '8': return font5x7_8;
+        case '9': return font5x7_9;
+        case ':': return font5x7_colon;
+        case '.': return font5x7_period;
+        case '\'': return font5x7_apos;
+        case 'A': return font5x7_A;
+        case 'B': return font5x7_B;
+        case 'C': return font5x7_C;
+        case 'D': return font5x7_D;
+        case 'E': return font5x7_E;
+        case 'F': return font5x7_F;
+        case 'G': return font5x7_G;
+        case 'H': return font5x7_H;
+        case 'I': return font5x7_I;
+        case 'J': return font5x7_J;
+        case 'K': return font5x7_K;
+        case 'L': return font5x7_L;
+        case 'M': return font5x7_M;
+        case 'N': return font5x7_N;
+        case 'O': return font5x7_O;
+        case 'P': return font5x7_P;
+        case 'Q': return font5x7_Q;
+        case 'R': return font5x7_R;
+        case 'S': return font5x7_S;
+        case 'T': return font5x7_T;
+        case 'U': return font5x7_U;
+        case 'V': return font5x7_V;
+        case 'W': return font5x7_W;
+        case 'X': return font5x7_X;
+        case 'Y': return font5x7_Y;
+        case 'Z': return font5x7_Z;
+        default:  return font5x7_space;
+    }
+}

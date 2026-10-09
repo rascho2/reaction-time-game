@@ -134,6 +134,6 @@ python3 reaction_game.py
 
 | Member | Contribution |
 |--------|--------------|
-| Rashid Brown ([@rascho2](https://github.com/rascho2)) | TODO: dein Teil, z. B. LED sequencing, Pi I/O, wiring & soldering, integration |
+| Rashid Brown ([@rascho2](https://github.com/rascho2)) | LED sequencing, Pi I/O, wiring & soldering, integration |
 | Team member | Display & UI |
 | Team member | 3D-printed housing |

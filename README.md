@@ -6,8 +6,11 @@ False starts are detected and disqualified, results are ranked and shown on a TF
 
 Built as a team project for the embedded systems course (ESHO1) at **TU Darmstadt**.
 
-<!-- TODO: Foto einfügen, z. B. ![Game console](docs/images/console.jpg) -->
-<!-- TODO: Video einfügen (siehe Anleitung im Chat) -->
+
+https://github.com/user-attachments/assets/cb83d2c6-36fd-4885-ba2b-9fdcee5f53a8
+
+
+<img width="1200" height="1600" alt="WhatsApp Image 2026-10-09 at 23 41 44" src="https://github.com/user-attachments/assets/216a8861-f7b8-47f1-b41d-9add579dc3eb" />
 
 ---
 
